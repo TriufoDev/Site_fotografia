@@ -1,0 +1,17 @@
+# robots.txt para Click Artes Fotografia
+# Este arquivo informa aos motores de busca como rastrear o site
+
+User-agent: *
+Allow: /
+
+# Arquivos importantes
+Sitemap: https://clickartesfotografia.com.br/sitemap.xml
+
+# Bloquear arquivos desnecessários
+Disallow: /script.js
+Disallow: /style.css
+Disallow: /*.txt$
+Disallow: /*.md$
+
+# Crawl-delay (opcional)
+Crawl-delay: 1

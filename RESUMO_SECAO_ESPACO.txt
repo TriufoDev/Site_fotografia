@@ -1,0 +1,308 @@
+/* ================================================
+   RESUMO DAS ALTERAÇÕES - SEÇÃO "ESPAÇO DEDICADO"
+   ================================================ */
+
+/* LOCALIZAÇÃO NA PÁGINA */
+
+Page Structure (Home):
+┌─────────────────────────────────────┐
+│         HEADER (Navegação)          │
+├─────────────────────────────────────┤
+│            HERO SECTION             │
+│  (Transformando momentos...)        │
+├─────────────────────────────────────┤
+│                                     │
+│    🆕 ESPAÇO DEDICADO (NOVO!)      │
+│                                     │
+│  Um Espaço Dedicado a Capturar      │
+│  Os Momentos Mais Preciosos...      │
+│                                     │
+│  [Gestante] [Recém-nascido]         │
+│  [Detalhes] [Família]               │
+│                                     │
+├─────────────────────────────────────┤
+│        NOSSOS SERVIÇOS (Antes)      │
+├─────────────────────────────────────┤
+│         DIFERENCIAIS                │
+├─────────────────────────────────────┤
+│            FOOTER                   │
+└─────────────────────────────────────┘
+
+
+/* ================================================
+   HTML - ELEMENTO ADICIONADO
+   ================================================ */
+
+<!-- Um Espaço Dedicado -->
+<section class="espaco-dedicado-section">
+    <div class="espaco-dedicado-container">
+        <h2 class="espaco-dedicado-title">Um Espaço Dedicado a Capturar</h2>
+        <h3 class="espaco-dedicado-subtitle">Os Momentos Mais Preciosos da Sua Família</h3>
+        <p class="espaco-dedicado-text">
+            Aqui, cada sorriso, olhar e detalhe se transformam em arte. 
+            Dos primeiros momentos do seu bebê, desde a barriguinha até 
+            à sua jornada com os pais, estamos prontos para contar a 
+            sua história com amor e naturalidade.
+        </p>
+    </div>
+
+    <div class="espaco-dedicado-grid">
+        <div class="espaco-dedicado-item">
+            <div class="espaco-dedicado-placeholder">
+                <i class="fas fa-baby"></i>
+            </div>
+            <p>Gestante</p>
+        </div>
+        <div class="espaco-dedicado-item">
+            <div class="espaco-dedicado-placeholder">
+                <i class="fas fa-heart"></i>
+            </div>
+            <p>Recém-Nascido</p>
+        </div>
+        <div class="espaco-dedicado-item">
+            <div class="espaco-dedicado-placeholder">
+                <i class="fas fa-hand-holding-heart"></i>
+            </div>
+            <p>Detalhes Especiais</p>
+        </div>
+        <div class="espaco-dedicado-item">
+            <div class="espaco-dedicado-placeholder">
+                <i class="fas fa-users"></i>
+            </div>
+            <p>Momentos em Família</p>
+        </div>
+    </div>
+</section>
+
+
+/* ================================================
+   CSS - CLASSES ADICIONADAS
+   ================================================ */
+
+.espaco-dedicado-section {
+    background: linear-gradient(135deg, rgba(184, 167, 212, 0.05), rgba(168, 216, 234, 0.05));
+    padding: 5rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.espaco-dedicado-container {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.espaco-dedicado-title {
+    font-size: 2.8rem;
+    color: var(--lilas);
+    margin-bottom: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.espaco-dedicado-subtitle {
+    font-size: 1.8rem;
+    color: var(--texto);
+    margin-bottom: 2rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.espaco-dedicado-text {
+    font-size: 1.1rem;
+    color: var(--texto);
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+.espaco-dedicado-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.espaco-dedicado-item {
+    text-align: center;
+    padding: 2rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.espaco-dedicado-item:hover {
+    transform: translateY(-10px);
+}
+
+.espaco-dedicado-placeholder {
+    width: 100%;
+    height: 280px;
+    background: linear-gradient(135deg, var(--lilas), var(--azul-claro));
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--branco);
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s;
+}
+
+.espaco-dedicado-placeholder:hover {
+    transform: scale(1.05);
+}
+
+.espaco-dedicado-item p {
+    font-size: 1.2rem;
+    color: var(--lilas);
+    font-weight: bold;
+}
+
+/* Modo Escuro */
+body.dark-mode .espaco-dedicado-section {
+    background: linear-gradient(135deg, rgba(74, 63, 107, 0.1), rgba(74, 95, 127, 0.1));
+}
+
+body.dark-mode .espaco-dedicado-placeholder {
+    background: linear-gradient(135deg, #4A3F6B, #4A5F7F);
+}
+
+
+/* ================================================
+   MEDIA QUERIES - RESPONSIVIDADE
+   ================================================ */
+
+@media (max-width: 768px) {
+    .espaco-dedicado-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .espaco-dedicado-title {
+        font-size: 1.8rem;
+    }
+
+    .espaco-dedicado-subtitle {
+        font-size: 1.3rem;
+    }
+
+    .espaco-dedicado-placeholder {
+        font-size: 2.5rem;
+        height: 200px;
+    }
+}
+
+
+/* ================================================
+   CARACTERÍSTICAS DA SEÇÃO
+   ================================================ */
+
+✓ Título grande e chamativo em maiúsculas
+✓ Subtítulo descritivo
+✓ Texto explicativo com até 2 linhas
+✓ Grid de 4 itens visuais com ícones
+✓ Hover effects suaves (translateY + scale)
+✓ Fundo com gradiente suave
+✓ Responsivo em todos os dispositivos
+✓ Compatível com modo escuro
+✓ Cores coordenadas com o design existente
+✓ Tipografia elegante e moderna
+
+
+/* ================================================
+   ÍCONES UTILIZADOS (Font Awesome)
+   ================================================ */
+
+1. Gestante:           fa-baby (👶)
+2. Recém-Nascido:      fa-heart (❤️)
+3. Detalhes Especiais: fa-hand-holding-heart (🤲)
+4. Momentos em Família: fa-users (👥)
+
+
+/* ================================================
+   TEXTOS PRINCIPAIS
+   ================================================ */
+
+Título:
+"Um Espaço Dedicado a Capturar"
+
+Subtítulo:
+"Os Momentos Mais Preciosos da Sua Família"
+
+Descrição:
+"Aqui, cada sorriso, olhar e detalhe se transformam em arte. 
+Dos primeiros momentos do seu bebê, desde a barriguinha até 
+à sua jornada com os pais, estamos prontos para contar a 
+sua história com amor e naturalidade."
+
+Rótulos dos Itens:
+1. Gestante
+2. Recém-Nascido
+3. Detalhes Especiais
+4. Momentos em Família
+
+
+/* ================================================
+   PALETA DE CORES
+   ================================================ */
+
+Fundo da Seção:    Gradiente lilás/azul (5% opacity)
+Placeholders:      Gradiente lilás (#B8A7D4) → azul (#A8D8EA)
+Título:            Lilás (#B8A7D4)
+Subtítulo/Texto:   Cinza escuro (#333333)
+Ícones:            Branco (#FFFFFF)
+Rótulos:           Lilás (#B8A7D4)
+
+Modo Escuro:
+Fundo:             Gradiente (74,63,107) → (74,95,127)
+Placeholders:      Gradiente escuro (#4A3F6B → #4A5F7F)
+Texto:             Branco/Cinza claro (var(--texto))
+
+
+/* ================================================
+   EFEITOS E TRANSIÇÕES
+   ================================================ */
+
+Mouse Hover no Item:
+  - Move item 10px para cima (translateY)
+  - Transição de 0.3s
+
+Mouse Hover no Placeholder:
+  - Aumenta 5% (scale 1.05)
+  - Transição de 0.3s
+
+Todas as transições são suaves e agradáveis.
+
+
+/* ================================================
+   DIMENSÕES E ESPAÇAMENTO
+   ================================================ */
+
+Desktop:
+  - Altura do placeholder: 280px
+  - Tamanho do ícone: 4rem
+  - Grid: 4 colunas
+  - Gap entre itens: 2rem
+  - Padding: 5rem 2rem
+
+Mobile (≤ 768px):
+  - Altura do placeholder: 200px
+  - Tamanho do ícone: 2.5rem
+  - Grid: 1 coluna
+  - Padding: ajustado
+
+
+/* ================================================
+   VERIFICAÇÕES FINAIS
+   ================================================ */
+
+✅ HTML válido (sem erros)
+✅ CSS válido (sem erros)
+✅ Responsivo em mobile
+✅ Responsivo em desktop
+✅ Modo escuro funciona
+✅ Efeitos hover funcionam
+✅ Tipografia legível
+✅ Cores coordenadas
+✅ Ícones carregam corretamente
+✅ Posicionamento correto
+

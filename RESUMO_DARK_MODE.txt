@@ -1,0 +1,139 @@
+/* RESUMO DAS MUDANÇAS - MODO ESCURO */
+
+/* ================================ 
+   ALTERAÇÕES NO index.html
+   ================================ */
+
+// ADICIONADO NO HEADER - BOTÃO DE TEMA:
+<li><button class="theme-toggle" onclick="toggleTheme()" aria-label="Alternar tema">
+    <i class="fas fa-moon" id="themeIcon"></i>
+</button></li>
+
+
+/* ================================ 
+   ALTERAÇÕES NO style.css
+   ================================ */
+
+// 1. VARIÁVEIS PARA MODO ESCURO - ADICIONADO APÓS :root:
+:root.dark-mode {
+    --branco: #1A1A1A;           /* Fundo escuro */
+    --texto: #E8E8E8;            /* Texto claro */
+    --cinza-claro: #2D2D2D;      /* Fundos secundários escuros */
+}
+
+// 2. BODY - ADICIONADA TRANSIÇÃO SUAVE:
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+    background-color: var(--branco);  /* Fundo escuro */
+}
+
+// 3. HEADER EM MODO ESCURO:
+header.dark-mode {
+    background: linear-gradient(135deg, #4A3F6B, #4A5F7F);
+}
+
+// 4. BOTÃO DE TEMA - NOVO ESTILO:
+.theme-toggle {
+    background: none;
+    border: none;
+    color: var(--branco);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.3s, color 0.3s;
+    padding: 0;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.2);
+}
+
+// 5. ELEMENTOS ADICIONAIS EM MODO ESCURO:
+body.dark-mode .cta-button { /* Botões */ }
+body.dark-mode .section-title { /* Títulos */ }
+body.dark-mode .newsletter-form input { /* Inputs */ }
+body.dark-mode .service-card { /* Cards */ }
+body.dark-mode .diferencial-item { /* Itens */ }
+body.dark-mode .form-group input/textarea/select { /* Formulários */ }
+body.dark-mode .form-container { /* Container de formulário */ }
+
+// 6. FOOTER EM MODO ESCURO:
+footer.dark-mode {
+    background: linear-gradient(135deg, #4A3F6B, #4A5F7F);
+}
+
+
+/* ================================ 
+   ALTERAÇÕES NO script.js
+   ================================ */
+
+// 1. FUNÇÃO toggleTheme() - ALTERNA O TEMA:
+function toggleTheme() {
+    // Alterna dark-mode em: html, body, header, footer
+    // Alterna ícone entre fa-moon e fa-sun
+    // Salva preferência em localStorage
+}
+
+// 2. FUNÇÃO loadTheme() - CARREGA TEMA SALVO:
+function loadTheme() {
+    // Verifica localStorage por preferência de tema
+    // Se dark-mode estava ativo, restaura os estilos
+    // Atualiza o ícone
+}
+
+// 3. EVENT LISTENER - EXECUTA AO CARREGAR PÁGINA:
+document.addEventListener('DOMContentLoaded', loadTheme);
+
+
+/* ================================ 
+   FUNCIONALIDADES PRINCIPAIS
+   ================================ */
+
+✓ Botão flutuante na barra de navegação
+✓ Ícone animado (lua/sol) que alterna
+✓ Transições suaves entre temas (0.3s)
+✓ Salvamento de preferência em localStorage
+✓ Restauração automática do tema ao carregar
+✓ Contraste adequado em ambos os temas
+✓ Totalmente responsivo (mobile, tablet, desktop)
+✓ Sem erros de CSS ou JavaScript
+
+
+/* ================================ 
+   COMO TESTAR
+   ================================ */
+
+1. Abra index.html no navegador
+2. Localize o ícone de lua (🌙) na navegação (canto direito)
+3. Clique no ícone para ativar modo escuro
+4. Clique novamente para retornar ao modo claro
+5. Recarregue a página - o tema deve ser restaurado
+6. Teste em diferentes páginas/seções
+
+
+/* ================================ 
+   ESTRUTURA DO CÓDIGO
+   ================================ */
+
+HTML:
+  └─ Button.theme-toggle
+      └─ i#themeIcon.fa-moon/fa-sun
+
+CSS:
+  ├─ :root.dark-mode (variáveis)
+  ├─ body.dark-mode
+  ├─ header.dark-mode
+  ├─ footer.dark-mode
+  ├─ .theme-toggle (estilo)
+  └─ [elemento].dark-mode (para cada elemento)
+
+JavaScript:
+  ├─ toggleTheme() - alterna classe dark-mode
+  ├─ loadTheme() - restaura tema ao carregar
+  └─ DOMContentLoaded event listener
+
+Storage:
+  └─ localStorage.darkMode (boolean)
+

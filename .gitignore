@@ -1,0 +1,26 @@
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Arquivos temporários
+*.tmp
+*.bak
+*.swp
+*~
+
+# Logs
+*.log
+
+# Arquivos de IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Node modules (se usar futuramente)
+node_modules/
+
+# Arquivos de ambiente (se tiver senhas ou tokens)
+.env
+.env.local

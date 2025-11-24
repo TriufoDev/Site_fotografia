@@ -1,0 +1,20 @@
+ <!--
+        <!-- Newsletter -->
+        <section class="newsletter">
+            <!-- Seção para inscrição em newsletter -->
+            <h3>Inscreva-se e receba nossas novidades</h3>
+            <!-- Título da seção de newsletter -->
+            <p>Fique por dentro de dicas, promoções e novidades!</p>
+            <!-- Descrição da newsletter -->
+            <form class="newsletter-form" onsubmit="return submitNewsletter(event)">
+                <!-- Formulário de newsletter com função JavaScript ao enviar -->
+                <input type="email" placeholder="Digite seu melhor e-mail" required aria-label="Email para newsletter">
+                <!-- Campo de entrada para email (obrigatório) -->
+                <button type="submit" aria-label="Inscrever">
+                    <!-- Botão para enviar o formulário -->
+                    <i class="fas fa-paper-plane"></i>
+                    <!-- Ícone de envio (avião de papel) -->
+                </button>
+            </form>
+        </section>
+            -->
